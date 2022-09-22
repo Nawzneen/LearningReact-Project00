@@ -3,13 +3,17 @@ import "./App.css";
 import React from "react";
 import Cards from "./Components/Cards.js";
 import Test from "./Components/Test.js";
-// import img1 from "images/mr-whikerson.png";
+import jokesData from "./jokesData.js";
+import Jokes from "./Components/Jokes.js";
 
-function App() {
+export default function App() {
+  const jokeElements = jokesData.map((joke) => (
+    <Jokes setup={joke.setup} punchline={joke.punchline} />
+  ));
   return (
     <div className="contacts">
       <Cards
-        img="images/mr-whikerson.png"
+        img="./images/mr-whiskerson.png"
         name="Mr. Whiskerson"
         phone="(212) 555-1234"
         email="mr.whiskaz@catnap.meow"
@@ -33,11 +37,14 @@ function App() {
         email="pumpkin@scrimba.com"
       />
       <br></br>
-      <br></br>
-      <br></br>
       <Test />
+      <hr />
+      <hr />
+      <Jokes
+        setup="What's the best thing about Switzerland?"
+        punchline="I don't know, but the flag is a big plus!"
+      />
+      <div>{jokeElements}</div>
     </div>
   );
 }
-
-export default App;
