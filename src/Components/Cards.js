@@ -1,6 +1,4 @@
 import React from "react";
-import phoneIcon from "../images/phone-icon.png";
-import mailIcon from "../images/mail-icon.png";
 
 export default function Cards(props) {
   return (
@@ -8,11 +6,11 @@ export default function Cards(props) {
       <img src={props.img} />
       <h3>{props.name}</h3>
       <div className="info-group">
-        <img src={phoneIcon} />
+        <img src="./images/phone-icon.png" />
         <p>{props.phone}</p>
       </div>
       <div className="info-group">
-        <img src={mailIcon} />
+        <img src="./images/mail-icon.png" />
         <p>{props.email}</p>
       </div>
     </div>
