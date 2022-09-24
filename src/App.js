@@ -5,10 +5,15 @@ import Cards from "./Components/Cards.js";
 import Test from "./Components/Test.js";
 import jokesData from "./jokesData.js";
 import Jokes from "./Components/Jokes.js";
+import journalData from "./journalData.js";
+import Journal from "./Components/Journal.js";
 
 export default function App() {
   const jokeElements = jokesData.map((joke) => (
     <Jokes setup={joke.setup} punchline={joke.punchline} />
+  ));
+  const journalItems = journalData.map((item) => (
+    <Journal key={item.id} {...item} />
   ));
   return (
     <div>
@@ -47,6 +52,10 @@ export default function App() {
         punchline="I don't know, but the flag is a big plus!"
       />
       <div>{jokeElements}</div>
+
+      <hr />
+      {/* <Journal /> */}
+      {journalItems}
     </div>
   );
 }
