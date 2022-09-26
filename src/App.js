@@ -16,7 +16,7 @@ export default function App() {
     <Journal key={item.id} {...item} />
   ));
   return (
-    <div>
+    <div className="container">
       <div className="contacts">
         <Cards
           img="./images/mr-whiskerson.png"
@@ -56,6 +56,7 @@ export default function App() {
       <hr />
       {/* <Journal /> */}
       {journalItems}
+      <hr />
     </div>
   );
 }
