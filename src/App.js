@@ -7,6 +7,8 @@ import jokesData from "./jokesData.js";
 import Jokes from "./Components/Jokes.js";
 import journalData from "./journalData.js";
 import Journal from "./Components/Journal.js";
+import Form from "./Components/Form.js";
+import NewForm from "./Components/NewForm";
 
 export default function App() {
   const jokeElements = jokesData.map((joke) => (
@@ -57,6 +59,8 @@ export default function App() {
       {/* <Journal /> */}
       {journalItems}
       <hr />
+      <Form />
+      <NewForm />
     </div>
   );
 }
