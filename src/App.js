@@ -9,6 +9,7 @@ import journalData from "./journalData.js";
 import Journal from "./Components/Journal.js";
 import Form from "./Components/Form.js";
 import NewForm from "./Components/NewForm";
+import Toggle from "./Components/Toggle";
 
 export default function App() {
   const jokeElements = jokesData.map((joke) => (
@@ -61,6 +62,8 @@ export default function App() {
       <hr />
       <Form />
       <NewForm />
+      <br />
+      <Toggle />
     </div>
   );
 }
